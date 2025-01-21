@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable prefer-const */
-
 describe('Basic Types', () => {
   it('Implicit Types', () => {
     const num1 = 12;
@@ -19,7 +16,17 @@ describe('Basic Types', () => {
 
     expect(age).toBeDefined();
 
+    expect(luckyNumbers.length).toBe(4);
+
     expect(answer).toBe(22);
+  });
+
+  it('A little bit about strings', () => {
+    const myName = 'Putintane';
+    const yourName = 'Putintane';
+    const theirName = `Putintane`;
+
+    expect(myName).toEqual(yourName);
   });
 });
 
