@@ -1,4 +1,5 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, inject, VERSION } from '@angular/core';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-welcome',
@@ -7,7 +8,7 @@ import { Component, VERSION } from '@angular/core';
     <div class="prose pt-12">
       <h1>Angular Starter</h1>
       <p>Using Angular {{ v.full }}</p>
-
+      <p>This is a change</p>
       <ul>
         <li><a href="https://tailwindcss.com/">Tailwind for CSS</a></li>
         <li><a href="https://daisyui.com/">DaisyUi for UI Library</a></li>
@@ -21,4 +22,5 @@ import { Component, VERSION } from '@angular/core';
 })
 export class WelcomeComponent {
   v = VERSION;
+  #service = inject(DataService);
 }
